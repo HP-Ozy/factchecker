@@ -34,12 +34,12 @@ La skill è una cartella con dentro `SKILL.md`. Per installarla:
 
 **Windows**
 ```powershell
-git clone https://github.com/<tuo-utente>/factchecker.git "$env:USERPROFILE\.claude\skills\factchecker"
+git clone https://github.com/HP-Ozy/factchecker.git "$env:USERPROFILE\.claude\skills\factchecker"
 ```
 
 **macOS / Linux**
 ```bash
-git clone https://github.com/<tuo-utente>/factchecker.git ~/.claude/skills/factchecker
+git clone https://github.com/HP-Ozy/factchecker.git ~/.claude/skills/factchecker
 ```
 
 Poi riavvia Claude Code. Verifica che sia attiva con `/factchecker`.
