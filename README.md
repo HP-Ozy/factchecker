@@ -20,7 +20,7 @@ Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colo
 
 ```
 
-# ⬇ aggiungendo "--fonti" puoi vedere anche le fonti utilizzate e le analisi degli esperti.
+⬇ aggiungendo "--fonti" puoi vedere anche le fonti utilizzate e le analisi degli esperti.
 ```
 /factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
 ```
