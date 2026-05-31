@@ -1,28 +1,21 @@
-# 🔎 FactChecker — Skill per Claude Code
-
-Una skill per [Claude Code](https://claude.com/claude-code) che verifica un'affermazione cercando su internet **almeno 3 fonti autorevoli** (pubbliche istituzionali o private ma autorevoli), cita **chi l'ha detta / dove è stata trovata** e il **tipo e livello di autorevolezza** di ogni fonte, e infine emette un verdetto:
-
+# 🔎 FactChecker — Skill 
+Una skill che verifica un'affermazione usando parametri di confronto e tacniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti, e al termine del processo ti da **almeno 3 fonti autorevoli** (pubbliche istituzionali o private ma autorevoli), cita **chi l'ha detta / dove è stata trovata** e il **tipo e livello di autorevolezza della fonte** :
 **VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
 
 ## Come si usa
 
-Dentro Claude Code:
+Dentro il tuo sistema Claude:
 
 ```
-/factchecker Le carni rosse lavorate aumentano il rischio di cancro del colon-retto
+/factchecker Le carni rosse lavorate aumentano il rischio di cancro del colon-retto 
 ```
-
-Oppure in linguaggio naturale:
-- `fact check: i pinguini vivono al Polo Nord`
-- `verifica questa informazione: ...`
-- `è vero che ...?`
 
 ### Esempio di output
 
 ```
 🔎 AFFERMAZIONE: "La carne lavorata aumenta il rischio di cancro"
 📊 VERDETTO: VALIDA ✅
-📚 FONTI (3 autorevoli)
+📚 FONTI (Verificate dal processo)
  1. OMS/IARC — who.int — Pubblica istituzionale — Alta
  2. AIRC — airc.it — Privata autorevole — Alta
  3. Fondazione Veronesi — fondazioneveronesi.it — Privata autorevole — Alta/Media
