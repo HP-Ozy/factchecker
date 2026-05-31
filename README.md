@@ -18,11 +18,11 @@ Dentro il tuo sistema Claude:
 📊 VALIDA ✅  ·  🎯 Confidenza: Alta 🟢
 Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colon-retto; prove concordi e nessuna smentita autorevole.
 
-ℹ️ Per fonti e analisi degli esperti: rilancia il comando /factchecker con --fonti.
-```
-/factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
 ```
 
+# ℹ️ in pochi secondi con il comando "--fonti" puoi vedere anche le fonti utilizzate e le analisi degli esperti.
+```
+/factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
 ```
 🔎 AFFERMAZIONE VERIFICATA
 "La carne lavorata aumenta il rischio di cancro del colon-retto"
