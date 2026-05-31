@@ -24,7 +24,7 @@ Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colo
 ```
 /factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
 ```
-## Installazione
+## Come si installa ? 
 
 La skill è una cartella con dentro `SKILL.md`. Per installarla:
 
