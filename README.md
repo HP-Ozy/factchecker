@@ -3,8 +3,6 @@ Una skill che verifica un'affermazione usando parametri di confronto e tacniche 
 
 **VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
 
-> Zero rotture: leggi il bollino e hai capito. Se poi vuoi vedere le fonti e i confronti degli esperti, le chiedi tu con `--fonti`.
-
 ## Come si usa
 
 Dentro il tuo sistema Claude:
@@ -13,22 +11,14 @@ Dentro il tuo sistema Claude:
 /factchecker Le carni rosse lavorate aumentano il rischio di cancro del colon-retto 
 ```
 
-### Cosa vedi di default (compatto)
-
-Solo il risultato, niente muro di testo:
+### Cosa vedi di default 
 
 ```
 🔎 "La carne lavorata aumenta il rischio di cancro del colon-retto"
 📊 VALIDA ✅  ·  🎯 Confidenza: Alta 🟢
 Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colon-retto; prove concordi e nessuna smentita autorevole.
 
-ℹ️ Per fonti e analisi degli esperti: rilancia con --fonti.
-```
-
-### Se vuoi vedere tutto (esteso)
-
-Aggiungi `--fonti` (o scrivi "mostra le fonti" / "dammi i dettagli") e ti apre il cofano:
-
+ℹ️ Per fonti e analisi degli esperti: rilancia il comando /factchecker con --fonti.
 ```
 /factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
 ```
