@@ -34,13 +34,19 @@ Scegli i kit rilevanti (almeno **Avvocato** + uno tematico). Ogni kit produce un
 - Distingui FATTO da OPINIONE: si fact-checkano solo i fatti. Se è pura opinione, dillo e fermati.
 - Decidi **quali kit esperti** attivare in base alla natura dell'affermazione.
 
-### 2. Cerca su internet (≥3 fonti indipendenti)
+### 2a. Cerca fonti (a favore)
 Usa **WebSearch** per trovare candidati e **WebFetch** per leggere il contenuto reale prima di citarlo (non fidarti solo dello snippet). Obiettivi:
 - Trova **almeno 3 fonti** che trattino l'affermazione.
 - Punta a fonti **indipendenti tra loro** (non 3 ripubblicazioni della stessa agenzia).
 - Varia gli angoli di ricerca: termini diretti, nome di chi l'ha detta, evento + data.
-- **Ricerca attiva di smentite (obbligatoria)**: dedica almeno una ricerca a confutazioni e prove contrarie ("debunk", "smentita", "falso", "rettifica", "myth", "fact check"). Non fermarti alla prima conferma.
 - Quando possibile risali alla **fonte primaria** (documento originale, comunicato ufficiale, studio, dato grezzo), non solo a chi la riporta.
+
+### 2b. Cerca controprove (obbligatorio)
+Fase separata e sempre dovuta: cerca **attivamente di smentire** l'affermazione, con lo stesso impegno della fase 2a.
+- Dedica ricerche apposite a confutazioni ("debunk", "smentita", "falso", "rettifica", "myth", "fact check") e al nome di chi l'ha detta + "critica/errore".
+- Cerca **fonti contrarie autorevoli** e la **migliore prova contraria** disponibile (vedi `kits/lawyer.md`).
+- Registra le controprove come fonti a sé, con tipo e autorevolezza, esattamente come quelle a favore.
+- Se non trovi controprove, dichiaralo: l'assenza di smentite va distinta dalla presenza di conferme.
 
 ### 3. Valuta l'autorevolezza di ogni fonte
 Per ciascuna fonte classifica **tipo** e **autorevolezza**:
@@ -64,15 +70,33 @@ Per ogni fonte registra: **nome/testata o autore**, **link**, **tipo** (pubblica
 ### 4. Applica i kit esperti
 Passa l'affermazione e le fonti raccolte attraverso i kit scelti (vedi sopra). Per ognuno produci un **mini-giudizio** di 1-3 righe seguendo l'output indicato nel file del kit. Almeno l'**Avvocato** va sempre applicato: deve riportare la migliore prova contraria trovata. Se i kit divergono dalle fonti (es. fonti favorevoli ma evidenza scientifica debole), questo pesa sul verdetto.
 
-### 5. Verdetto
-Decidi in base alle fonti **autorevoli** trovate e ai mini-giudizi dei kit (le fonti basse non fanno verdetto):
+### 5. Valuta la qualità delle evidenze
+Prima del verdetto, pesa **quanto valgono** le prove raccolte (non quante sono). Considera:
+- **Autorevolezza** delle fonti a favore e contro (Alta/Media/Bassa).
+- **Indipendenza**: conferme da origini realmente distinte, non riprese della stessa agenzia.
+- **Concordanza**: le fonti autorevoli sono allineate o in conflitto?
+- **Forza dell'evidenza** secondo i kit (es. RCT replicato > studio osservazionale > aneddoto; prova diretta > indizio).
+- **Esistenza e forza delle controprove** trovate nella fase 2b.
+- **Fonte primaria** raggiunta o solo riportata.
+- **Lacune**: paywall, dati datati, definizioni ambigue, campione debole.
 
-- **VALIDA** ✅ — ≥3 fonti autorevoli indipendenti confermano concordemente.
-- **PARZIALMENTE VALIDA** ⚠️ — confermata in parte, o con sfumature/condizioni, o le fonti autorevoli sono <3, o c'è qualche disaccordo.
+Sintetizza in una **qualità complessiva dell'evidenza**: Forte / Media / Debole.
+
+### 6. Verdetto + livello di confidenza
+Emetti **due cose distinte**: la *direzione* (verdetto) e *quanto sei sicuro* (confidenza). Sono indipendenti: si può essere molto sicuri di un ❌, o poco sicuri di un ✅.
+
+**Verdetto** (in base a fonti autorevoli + kit; le fonti basse non fanno verdetto):
+- **VALIDA** ✅ — fonti autorevoli indipendenti confermano concordemente e le controprove sono deboli/assenti.
+- **PARZIALMENTE VALIDA** ⚠️ — confermata in parte, con sfumature/condizioni, o con disaccordo tra fonti.
 - **NON VALIDA** ❌ — fonti autorevoli la smentiscono, oppure nessuna fonte autorevole la sostiene.
-- **NON VERIFICABILE** ❔ — affermazione troppo vaga, sul futuro, o nessuna fonte affidabile trovata in nessuna direzione.
+- **NON VERIFICABILE** ❔ — troppo vaga, sul futuro, o nessuna fonte affidabile in nessuna direzione.
 
-Regola chiave: la validità dipende dall'**aver trovato fonti pubbliche/private autorevoli** che la sostengano, non dal numero grezzo di link.
+**Livello di confidenza** (in base alla qualità delle evidenze, fase 5):
+- **Alta 🟢** — evidenza Forte: fonti autorevoli, indipendenti, concordi, controprove gestite, fonte primaria raggiunta.
+- **Media 🟡** — evidenza Media: fonti <3 o di livello misto, qualche conflitto, fonte primaria non raggiunta.
+- **Bassa 🔴** — evidenza Debole: poche fonti deboli, conflitto irrisolto, controprove non valutabili, forti lacune.
+
+Regola chiave: il verdetto dipende dall'**aver trovato fonti autorevoli**, la confidenza dalla **qualità** di quelle prove — mai dal numero grezzo di link. Se la confidenza è Bassa, **dillo apertamente** e non vendere il verdetto come certo.
 
 ## Formato output
 
@@ -82,6 +106,7 @@ Regola chiave: la validità dipende dall'**aver trovato fonti pubbliche/private 
 Sostenuta da: <chi l'ha detta / dove trovata, se noto>
 
 📊 VERDETTO: <VALIDA ✅ | PARZIALMENTE VALIDA ⚠️ | NON VALIDA ❌ | NON VERIFICABILE ❔>
+🎯 CONFIDENZA: <Alta 🟢 | Media 🟡 | Bassa 🔴> — qualità evidenza: <Forte | Media | Debole>
 <1-2 frasi di motivazione>
 
 🧪 ANALISI ESPERTI
@@ -90,7 +115,7 @@ Sostenuta da: <chi l'ha detta / dove trovata, se noto>
 - 🔬 Scienziato: <forza dell'evidenza, se applicato>
 - 📰 Giornalista: <fonte/interesse/incrocio, se applicato>
 
-📚 FONTI (<n> trovate, <m> autorevoli)
+📚 FONTI (<n> trovate, <m> autorevoli — <f> a favore / <c> contrarie)
 
 1. <Nome fonte / autore> — <link>
    Tipo: <Pubblica istituzionale | Pubblica scientifica | Privata testata | Fact-checker | ...>

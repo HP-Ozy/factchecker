@@ -15,6 +15,7 @@ Dentro il tuo sistema Claude:
 ```
 🔎 AFFERMAZIONE: "La carne lavorata aumenta il rischio di cancro"
 📊 VERDETTO: VALIDA ✅
+🎯 CONFIDENZA: Alta 🟢 — qualità evidenza: Forte
 📚 FONTI (Verificate dal processo)
  1. OMS/IARC — who.int — Pubblica istituzionale — Alta
  2. AIRC — airc.it — Privata autorevole — Alta
@@ -39,10 +40,14 @@ Poi riavvia Claude. Verifica che sia attiva con `/factchecker`.
 
 ## Come funziona la skill ? 
 
+Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qualità delle evidenze → emette confidenza**:
+
 1. **Scompone** l'affermazione isolando i fatti verificabili (scarta le opinioni).
-2. **Cerca** con WebSearch e **legge le pagine reali**.
-3. Trova molteplici **fonti indipendenti**, classifica segendo le abitudini e i metodi degli esperti poi suddivide le fonti ognuna per **tipo** e **autorevolezza in base a quello che farebbero gli esperti**.
-4. **Verdetto** in base alle fonti autorevoli trovate — risalendo, quando possibile, alla fonte primaria.
+2. **Cerca fonti a favore** con WebSearch e **legge le pagine reali** con WebFetch (non solo gli snippet), puntando alla fonte primaria.
+3. **Cerca controprove** (fase obbligatoria e separata): prova attivamente a smentire, registrando le fonti contrarie con pari rigore.
+4. Classifica ogni fonte per **tipo** e **autorevolezza** seguendo i metodi degli esperti e passa l'affermazione per i **kit esperti**.
+5. **Valuta la qualità delle evidenze** (Forte/Media/Debole): autorevolezza, indipendenza, concordanza, forza delle prove e delle controprove.
+6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta 🟢 / Media 🟡 / Bassa 🔴).
 
 ### Cosa conta come fonte autorevole
 - **Pubbliche istituzionali/mondiali:** ONU, OMS, UE, ISTAT, banche centrali, IPCC…
