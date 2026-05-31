@@ -1,5 +1,5 @@
 # FactChecker — Skill 
-Una skill che verifica un'affermazione usando parametri di confronto e tecniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti. Dietro le quinte cerca le fonti, prova a smentirle, le mette a confronto e ne pesa l'autorevolezza — ma a te, di default, **non rovescia addosso tutto**: ti dà solo il **bollino** e la **confidenza** dell'informazione.
+Una skill che verifica un'affermazione usando parametri di confronto e tecniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti. Dietro le quinte cerca le fonti, prova a smentirle, le mette a confronto e ne pesa l'autorevolezza.
 
 **VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
 
