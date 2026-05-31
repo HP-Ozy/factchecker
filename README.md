@@ -34,7 +34,7 @@ Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colo
 - ⚖️ Avvocato: nessuna prova contraria autorevole; regge al contraddittorio.
 - 🔬 Scienziato: classificazione IARC Gruppo 1, evidenza epidemiologica solida.
 
-📚 FONTI (3 autorevoli — 3 a favore / 0 contrarie)
+📚 FONTI
  1. OMS/IARC — who.int — Pubblica istituzionale — Alta
  2. AIRC — airc.it — Privata autorevole — Alta
  3. Fondazione Veronesi — fondazioneveronesi.it — Privata autorevole — Alta/Media
@@ -67,9 +67,8 @@ Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qual
 5. **Valuta la qualità delle evidenze** (Forte/Media/Debole): autorevolezza, indipendenza, concordanza, forza delle prove e delle controprove.
 6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta 🟢 / Media 🟡 / Bassa 🔴).
 
-> Tutto questo lavoro (fasi 1–5) viene **sempre** fatto per intero. Quello che cambia è solo *quanto* te ne mostra: di default vedi il bollino + confidenza; con `--fonti` vedi anche fonti e analisi degli esperti. La profondità dell'analisi non cambia mai — cambia solo la verbosità.
 
-### Cosa conta come fonte autorevole
+### la Skill cosa conta come fonte autorevole ?
 - **Pubbliche istituzionali/mondiali:** ONU, OMS, UE, ISTAT, banche centrali, IPCC…
 - **Scientifiche peer-reviewed:** Nature, Science, NEJM, Lancet, PubMed…
 - **Private autorevoli:** Reuters, AP, AFP, BBC, ANSA + fact-checker (Snopes, Pagella Politica, Full Fact…)
