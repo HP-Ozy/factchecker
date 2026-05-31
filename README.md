@@ -59,8 +59,20 @@ Poi riavvia Claude Code. Verifica che sia attiva con `/factchecker`.
 - **Private autorevoli:** Reuters, AP, AFP, BBC, ANSA + fact-checker (Snopes, Pagella Politica, Full Fact…)
 - **Escluse dal verdetto:** blog anonimi, social non verificati, contenuti senza fonte.
 
+## Kit esperti (analisi controfattuale)
+
+Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso fino a **4 lenti esperte** (file in `kits/`, caricati solo se pertinenti):
+
+- ⚖️ **Avvocato** (`kits/lawyer.md`) — sempre attivo: onere della prova e ricerca attiva della smentita più forte.
+- 📊 **Analista del dato** (`kits/data-analyst.md`) — rigore statistico, provenienza del dato, cherry-picking, correlazione ≠ causazione.
+- 🔬 **Scienziato** (`kits/scientist.md`) — metodo, peer-review, riproducibilità, consenso scientifico.
+- 📰 **Giornalista** (`kits/journalist.md`) — chi/quando/perché, incrocio di fonti indipendenti, conflitti d'interesse.
+
+Ogni kit produce un mini-giudizio che confluisce nel verdetto, così la verifica non si limita a *quante* fonti confermano, ma *quanto regge* l'affermazione sotto esame critico.
+
 ## Principi anti-bufala
 
+- Verifica, non asseconda: tratta l'affermazione come ipotesi da falsificare, non da confermare.
 - Mai inventare fonti, link o citazioni.
 - Legge il contenuto reale prima di citarlo.
 - Segnala se le fonti derivano tutte dalla stessa origine (non sono conferme indipendenti).
