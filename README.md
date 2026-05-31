@@ -65,7 +65,7 @@ Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso **le
 - 🔬 **Scienziato** (`kits/scientist.md`) — metodo, peer-review, riproducibilità, consenso scientifico.
 - 📰 **Giornalista** (`kits/journalist.md`) — chi/quando/perché, incrocio di fonti indipendenti, conflitti d'interesse.
 
-Ogni kit produce un mini-giudizio che confluisce nel verdetto, così la verifica non si limita a *quante* fonti confermano, ma *quanto regge* l'affermazione sotto esame critico seguendo i ##Principi anti-bufala:
+Ogni kit produce un mini-giudizio che confluisce nel verdetto, così la verifica non si limita a *quante* fonti confermano, ma *quanto regge* l'affermazione sotto esame critico seguendo i #Principi anti-bufala:
 - Verifica, non asseconda: tratta l'affermazione come ipotesi da falsificare, non da confermare.
 - Mai inventare fonti, link o citazioni.
 - Legge il contenuto reale prima di citarlo.
