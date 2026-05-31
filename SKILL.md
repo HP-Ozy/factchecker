@@ -1,6 +1,6 @@
 ---
 name: factchecker
-description: Fact-checker — prende un'informazione/affermazione e cerca su internet almeno 3 fonti autorevoli (pubbliche o private ma autorevoli) per verificarla. Cita chi l'ha detta o dove è stata trovata, il tipo di ciascuna fonte e il suo livello di autorevolezza, poi emette un verdetto VALIDA / NON VALIDA / PARZIALMENTE VALIDA in base alle fonti trovate. Trigger: "fact check", "verifica questa informazione", "è vero che", "trova le fonti", "/factchecker".
+description: Fact-checker — prende un'informazione/affermazione, cerca fonti autorevoli, prova a smentirle con tecniche da avvocato/analista/scienziato/giornalista, ne pesa la qualità e mostra di default solo il bollino (VALIDA / PARZIALMENTE VALIDA / NON VALIDA / NON VERIFICABILE) con il livello di confidenza. Fonti e analisi esperti solo a richiesta (flag --fonti). Trigger: "fact check", "verifica questa informazione", "è vero che", "trova le fonti", "/factchecker".
 ---
 
 # FactChecker
@@ -10,6 +10,8 @@ Verifica un'affermazione cercando fonti autorevoli su internet e produce un verd
 ## Input
 
 L'affermazione/informazione da verificare (`$ARGUMENTS`). Se manca, chiedi all'utente quale informazione verificare e da quale contesto proviene (chi l'ha detta, dove l'ha letta), poi procedi.
+
+**Modalità di output**: se l'input contiene `--fonti`, `--dettagli`, `esteso` o frasi tipo "mostra le fonti" / "dammi i dettagli", usa la modalità ESTESA (vedi Formato output). Altrimenti usa la modalità COMPATTA di default. Rimuovi il flag dal testo prima di trattarlo come affermazione.
 
 ## Postura (anti-accondiscendenza)
 
@@ -100,6 +102,22 @@ Regola chiave: il verdetto dipende dall'**aver trovato fonti autorevoli**, la co
 
 ## Formato output
 
+**Il lavoro dietro le quinte (fasi 1–5: ricerca, controprove, kit esperti, qualità evidenze) va sempre svolto per intero.** Cambia solo *quanto* ne mostri all'utente: di default mostri solo il risultato, non la documentazione.
+
+### Modalità COMPATTA (default)
+È la risposta normale: l'utente vuole il "bollino", non leggersi tutte le fonti. Mostra **solo** il verdetto, la confidenza e una riga di sintesi. Niente elenco fonti, niente analisi esperti.
+
+```
+🔎 "<affermazione esatta>"
+📊 <VALIDA ✅ | PARZIALMENTE VALIDA ⚠️ | NON VALIDA ❌ | NON VERIFICABILE ❔>  ·  🎯 Confidenza: <Alta 🟢 | Media 🟡 | Bassa 🔴>
+<1 frase di sintesi: cosa dicono le prove, e l'eventuale cautela più importante>
+
+ℹ️ Per fonti e analisi degli esperti: rilancia con `--fonti`.
+```
+
+### Modalità ESTESA (a richiesta)
+Attivala **solo** se l'utente lo chiede esplicitamente: input che contiene `--fonti`, `--dettagli`, `esteso`, oppure frasi come "mostra le fonti", "fammi vedere le fonti", "dammi i dettagli". In quel caso mostra il report completo:
+
 ```
 🔎 AFFERMAZIONE VERIFICATA
 "<affermazione esatta>"
@@ -128,6 +146,8 @@ Sostenuta da: <chi l'ha detta / dove trovata, se noto>
 🧭 NOTE
 - <conflitti tra fonti, sfumature, mancanza di fonte primaria, cautele>
 ```
+
+Regola: la profondità dell'**analisi** non cambia mai tra le due modalità — cambia solo la **verbosità dell'output**. Il verdetto compatto deve poggiare sullo stesso identico lavoro del report esteso.
 
 ## Regole
 

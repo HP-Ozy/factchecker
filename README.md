@@ -1,6 +1,9 @@
 # FactChecker — Skill 
-Una skill che verifica un'affermazione usando parametri di confronto e tacniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti, e al termine del processo ti da **almeno 3 fonti autorevoli** (pubbliche istituzionali o private ma autorevoli), cita **chi l'ha detta / dove è stata trovata** e il **tipo e livello di autorevolezza della fonte** :
+Una skill che verifica un'affermazione usando parametri di confronto e tacniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti. Dietro le quinte cerca le fonti, prova a smentirle, le mette a confronto e ne pesa l'autorevolezza — ma a te, di default, **non rovescia addosso tutto**: ti dà solo il **bollino** e la **confidenza** dell'informazione.
+
 **VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
+
+> Zero rotture: leggi il bollino e hai capito. Se poi vuoi vedere le fonti e i confronti degli esperti, le chiedi tu con `--fonti`.
 
 ## Come si usa
 
@@ -10,13 +13,38 @@ Dentro il tuo sistema Claude:
 /factchecker Le carni rosse lavorate aumentano il rischio di cancro del colon-retto 
 ```
 
-### Esempio di output
+### Cosa vedi di default (compatto)
+
+Solo il risultato, niente muro di testo:
 
 ```
-🔎 AFFERMAZIONE: "La carne lavorata aumenta il rischio di cancro"
+🔎 "La carne lavorata aumenta il rischio di cancro del colon-retto"
+📊 VALIDA ✅  ·  🎯 Confidenza: Alta 🟢
+Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colon-retto; prove concordi e nessuna smentita autorevole.
+
+ℹ️ Per fonti e analisi degli esperti: rilancia con --fonti.
+```
+
+### Se vuoi vedere tutto (esteso)
+
+Aggiungi `--fonti` (o scrivi "mostra le fonti" / "dammi i dettagli") e ti apre il cofano:
+
+```
+/factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
+```
+
+```
+🔎 AFFERMAZIONE VERIFICATA
+"La carne lavorata aumenta il rischio di cancro del colon-retto"
+
 📊 VERDETTO: VALIDA ✅
 🎯 CONFIDENZA: Alta 🟢 — qualità evidenza: Forte
-📚 FONTI (Verificate dal processo)
+
+🧪 ANALISI ESPERTI
+- ⚖️ Avvocato: nessuna prova contraria autorevole; regge al contraddittorio.
+- 🔬 Scienziato: classificazione IARC Gruppo 1, evidenza epidemiologica solida.
+
+📚 FONTI (3 autorevoli — 3 a favore / 0 contrarie)
  1. OMS/IARC — who.int — Pubblica istituzionale — Alta
  2. AIRC — airc.it — Privata autorevole — Alta
  3. Fondazione Veronesi — fondazioneveronesi.it — Privata autorevole — Alta/Media
@@ -48,6 +76,8 @@ Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qual
 4. Classifica ogni fonte per **tipo** e **autorevolezza** seguendo i metodi degli esperti e passa l'affermazione per i **kit esperti**.
 5. **Valuta la qualità delle evidenze** (Forte/Media/Debole): autorevolezza, indipendenza, concordanza, forza delle prove e delle controprove.
 6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta 🟢 / Media 🟡 / Bassa 🔴).
+
+> Tutto questo lavoro (fasi 1–5) viene **sempre** fatto per intero. Quello che cambia è solo *quanto* te ne mostra: di default vedi il bollino + confidenza; con `--fonti` vedi anche fonti e analisi degli esperti. La profondità dell'analisi non cambia mai — cambia solo la verbosità.
 
 ### Cosa conta come fonte autorevole
 - **Pubbliche istituzionali/mondiali:** ONU, OMS, UE, ISTAT, banche centrali, IPCC…
