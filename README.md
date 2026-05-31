@@ -35,15 +35,13 @@ git clone https://github.com/HP-Ozy/factchecker.git "$env:USERPROFILE\.claude\sk
 git clone https://github.com/HP-Ozy/factchecker.git ~/.claude/skills/factchecker
 ```
 
-Poi riavvia Claude Code. Verifica che sia attiva con `/factchecker`.
+Poi riavvia Claude. Verifica che sia attiva con `/factchecker`.
 
-> In alternativa: scarica lo ZIP del repo e scompattalo nella cartella `~/.claude/skills/factchecker/`.
-
-## Come funziona
+## Come funziona la skill ? 
 
 1. **Scompone** l'affermazione isolando i fatti verificabili (scarta le opinioni).
-2. **Cerca** con WebSearch e **legge le pagine reali** con WebFetch (non solo gli snippet).
-3. Trova **≥3 fonti indipendenti**, classifica ognuna per **tipo** e **autorevolezza** (Alta/Media/Bassa).
+2. **Cerca** con WebSearch e **legge le pagine reali**.
+3. Trova molteplici **fonti indipendenti**, classifica segendo le abitudini e i metodi degli esperti poi suddivide le fonti ognuna per **tipo** e **autorevolezza in base a quello che farebbero gli esperti**.
 4. **Verdetto** in base alle fonti autorevoli trovate — risalendo, quando possibile, alla fonte primaria.
 
 ### Cosa conta come fonte autorevole
@@ -52,9 +50,9 @@ Poi riavvia Claude Code. Verifica che sia attiva con `/factchecker`.
 - **Private autorevoli:** Reuters, AP, AFP, BBC, ANSA + fact-checker (Snopes, Pagella Politica, Full Fact…)
 - **Escluse dal verdetto:** blog anonimi, social non verificati, contenuti senza fonte.
 
-## Kit esperti (analisi controfattuale)
+## Kit esperti che rafforzano la skill principale Factcheker
 
-Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso fino a **4 lenti esperte** (file in `kits/`, caricati solo se pertinenti):
+Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso **lenti esperte**:
 
 - ⚖️ **Avvocato** (`kits/lawyer.md`) — sempre attivo: onere della prova e ricerca attiva della smentita più forte.
 - 📊 **Analista del dato** (`kits/data-analyst.md`) — rigore statistico, provenienza del dato, cherry-picking, correlazione ≠ causazione.
@@ -64,7 +62,6 @@ Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso fino
 Ogni kit produce un mini-giudizio che confluisce nel verdetto, così la verifica non si limita a *quante* fonti confermano, ma *quanto regge* l'affermazione sotto esame critico.
 
 ## Principi anti-bufala
-
 - Verifica, non asseconda: tratta l'affermazione come ipotesi da falsificare, non da confermare.
 - Mai inventare fonti, link o citazioni.
 - Legge il contenuto reale prima di citarlo.
