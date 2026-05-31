@@ -1,8 +1,6 @@
 # FactChecker — Skill 
 Una skill che verifica un'affermazione usando parametri di confronto e tecniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti. Dietro le quinte cerca le fonti, prova a smentirle, le mette a confronto e ne pesa l'autorevolezza.
 
-**VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
-
 ## Come si usa
 
 Dentro il tuo sistema Claude:
