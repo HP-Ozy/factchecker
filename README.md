@@ -47,7 +47,7 @@ Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qual
 3. **Cerca controprove** (fase obbligatoria e separata): prova attivamente a smentire, registrando le fonti contrarie con pari rigore.
 4. Classifica ogni fonte per **tipo** e **autorevolezza** seguendo i metodi degli esperti e passa l'affermazione per i **kit esperti**.
 5. **Valuta la qualità delle evidenze** (Forte/Media/Debole): autorevolezza, indipendenza, concordanza, forza delle prove e delle controprove.
-6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta 🟢 / Media 🟡 / Bassa 🔴).
+6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta / Media / Bassa ).
 
 
 ### la Skill cosa conta come fonte autorevole ?
