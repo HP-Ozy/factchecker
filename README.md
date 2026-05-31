@@ -26,8 +26,6 @@ Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colo
 ```
 ## Come si installa ? 
 
-La skill è una cartella con dentro `SKILL.md`. Per installarla:
-
 **Windows**
 ```powershell
 git clone https://github.com/HP-Ozy/factchecker.git "$env:USERPROFILE\.claude\skills\factchecker"
