@@ -56,13 +56,6 @@ Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qual
 
 ## Kit esperti che rafforzano la skill principale Factcheker
 
-Oltre alla verifica delle fonti, ogni affermazione viene passata attraverso **lenti esperte**:
-
-- ⚖️ **Avvocato** (`kits/lawyer.md`) — sempre attivo: onere della prova e ricerca attiva della smentita più forte.
-- 📊 **Analista del dato** (`kits/data-analyst.md`) — rigore statistico, provenienza del dato, cherry-picking, correlazione ≠ causazione.
-- 🔬 **Scienziato** (`kits/scientist.md`) — metodo, peer-review, riproducibilità, consenso scientifico.
-- 📰 **Giornalista** (`kits/journalist.md`) — chi/quando/perché, incrocio di fonti indipendenti, conflitti d'interesse.
-
 Ogni kit produce un mini-giudizio che confluisce nel verdetto finale. In questo modo la verifica non si limita a contare quante fonti confermano un'affermazione, ma valuta quanto essa resista a un esame critico secondo i principi anti-bufala:
 - Verifica, non asseconda: tratta l'affermazione come ipotesi da falsificare, non da confermare.
 - Mai inventare fonti, link o citazioni.
