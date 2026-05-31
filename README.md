@@ -1,4 +1,4 @@
-# 🔎 FactChecker — Skill 
+# FactChecker — Skill 
 Una skill che verifica un'affermazione usando parametri di confronto e tacniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti, e al termine del processo ti da **almeno 3 fonti autorevoli** (pubbliche istituzionali o private ma autorevoli), cita **chi l'ha detta / dove è stata trovata** e il **tipo e livello di autorevolezza della fonte** :
 **VALIDA ✅ · PARZIALMENTE VALIDA ⚠️ · NON VALIDA ❌ · NON VERIFICABILE ❔**
 
