@@ -1,68 +1,79 @@
-# FactChecker — Skill 
-Una skill che verifica un'affermazione usando parametri di confronto e tecniche utilizzate da, Avvocati, Analisti professionisti, Scienziati rinomati, Giornalisti. Dietro le quinte cerca le fonti, prova a smentirle, le mette a confronto e ne pesa l'autorevolezza.
+# FactChecker — Skill
 
-## Come si usa
+A skill that verifies a claim using evaluation methods inspired by lawyers, professional analysts, renowned scientists, and journalists. Behind the scenes, it searches for sources, actively tries to disprove the claim, compares competing evidence, and weighs the authority of each source.
 
-Dentro il tuo sistema Claude:
+## How to Use
 
-```
-/factchecker Le carni rosse lavorate aumentano il rischio di cancro del colon-retto 
-```
+Inside your Claude system:
 
-### Cosa vedi di default 
-
-```
-🔎 "La carne lavorata aumenta il rischio di cancro del colon-retto"
-📊 VALIDA ✅  ·  🎯 Confidenza: Alta 🟢
-Le agenzie sanitarie classificano la carne lavorata come cancerogena per il colon-retto; prove concordi e nessuna smentita autorevole.
-
+```text
+/factchecker Processed red meat increases the risk of colorectal cancer
 ```
 
-⬇ Aggiungendo --fonti puoi visualizzare anche le fonti utilizzate e le analisi degli esperti.
-```
-/factchecker --fonti Le carni rosse lavorate aumentano il rischio di cancro
-```
-## Come si installa ? 
+### Default Output
 
-**Windows**
+```text
+🔎 "Processed meat increases the risk of colorectal cancer"
+📊 VALID ✅  ·  🎯 Confidence: High 🟢
+Health agencies classify processed meat as carcinogenic for colorectal cancer; the evidence is consistent and no authoritative refutation was found.
+```
+
+⬇ By adding `--sources`, you can also view the sources used and the expert analyses.
+
+```text
+/factchecker --sources Processed red meat increases the risk of cancer
+```
+
+## Installation
+
+### Windows
+
 ```powershell
 git clone https://github.com/HP-Ozy/factchecker.git "$env:USERPROFILE\.claude\skills\factchecker"
 ```
 
-**macOS / Linux**
+### macOS / Linux
+
 ```bash
 git clone https://github.com/HP-Ozy/factchecker.git ~/.claude/skills/factchecker
 ```
 
-Poi riavvia Claude. Verifica che sia attiva con `/factchecker`.
+Then restart Claude. Verify that the skill is active by running:
 
-## Come funziona la skill ? 
+```text
+/factchecker
+```
 
-Pipeline in 4 momenti — **cerca fonti → cerca controprove → valuta la qualità delle evidenze → emette confidenza**:
+## How Does the Skill Work?
 
-1. **Scompone** l'affermazione isolando i fatti verificabili (scarta le opinioni).
-2. **Cerca fonti a favore** con WebSearch e **legge le pagine reali** con WebFetch (non solo gli snippet), puntando alla fonte primaria.
-3. **Cerca controprove** (fase obbligatoria e separata): prova attivamente a smentire, registrando le fonti contrarie con pari rigore.
-4. Classifica ogni fonte per **tipo** e **autorevolezza** seguendo i metodi degli esperti e passa l'affermazione per i **kit esperti**.
-5. **Valuta la qualità delle evidenze** (Forte/Media/Debole): autorevolezza, indipendenza, concordanza, forza delle prove e delle controprove.
-6. Emette **verdetto + livello di confidenza** distinti: la *direzione* (vero/falso/parziale) e *quanto è sicura* (Alta / Media / Bassa ).
+A 4-stage pipeline — **find evidence → find counter-evidence → evaluate evidence quality → assign confidence**:
 
+1. **Breaks down** the claim into verifiable facts (discarding opinions).
+2. **Searches for supporting evidence** using WebSearch and **reads the actual pages** with WebFetch (not just snippets), prioritizing primary sources.
+3. **Searches for counter-evidence** (a mandatory and separate step): it actively attempts to refute the claim and records opposing sources with the same level of rigor.
+4. Classifies each source by **type** and **authority**, applying expert evaluation frameworks.
+5. **Evaluates evidence quality** (Strong / Moderate / Weak) based on authority, independence, consistency, supporting evidence, and counter-evidence.
+6. Produces a **verdict + confidence level** separately: the *direction* (true / false / partially true) and *how certain* the conclusion is (High / Medium / Low).
 
-### la Skill cosa conta come fonte autorevole ?
-- **Pubbliche istituzionali/mondiali:** ONU, OMS, UE, ISTAT, banche centrali, IPCC…
-- **Scientifiche peer-reviewed:** Nature, Science, NEJM, Lancet, PubMed…
-- **Private autorevoli:** Reuters, AP, AFP, BBC, ANSA + fact-checker (Snopes, Pagella Politica, Full Fact…)
-- **Escluse dal verdetto:** blog anonimi, social non verificati, contenuti senza fonte.
+### What Counts as an Authoritative Source?
 
-## Kit esperti che rafforzano la skill principale Factcheker
+- **Institutional and global organizations:** UN, WHO, EU, national statistics agencies, central banks, IPCC, and similar bodies.
+- **Peer-reviewed scientific sources:** Nature, Science, NEJM, Lancet, PubMed, and related journals.
+- **Trusted private organizations:** Reuters, AP, AFP, BBC, ANSA, as well as fact-checking organizations such as Snopes, Pagella Politica, and Full Fact.
+- **Excluded from verdicts:** anonymous blogs, unverified social media posts, and content without identifiable sources.
 
-Ogni kit produce un mini-giudizio che confluisce nel verdetto finale. In questo modo la verifica non si limita a contare quante fonti confermano un'affermazione, ma valuta quanto essa resista a un esame critico secondo i principi anti-bufala:
-- Verifica, non asseconda: tratta l'affermazione come ipotesi da falsificare, non da confermare.
-- Mai inventare fonti, link o citazioni.
-- Legge il contenuto reale prima di citarlo.
-- Segnala se le fonti derivano tutte dalla stessa origine (non sono conferme indipendenti).
-- Dichiara apertamente i limiti (paywall, dati datati, affermazione non verificabile).
+## Expert Kits That Strengthen FactChecker
 
-## Licenza
+Each expert kit produces a mini-assessment that contributes to the final verdict. This means verification is not limited to counting how many sources support a claim; it evaluates how well the claim withstands critical scrutiny according to anti-misinformation principles:
 
-MIT — vedi [LICENSE](LICENSE). Usala, modificala e condividila liberamente.
+- Verify, don't validate: treat every claim as a hypothesis to falsify, not something to confirm.
+- Never invent sources, links, or quotations.
+- Read the actual content before citing it.
+- Detect when multiple sources originate from the same underlying source (not independent confirmation).
+- Explicitly state limitations such as paywalls, outdated data, or non-verifiable claims.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+Use it, modify it, and share it freely.
