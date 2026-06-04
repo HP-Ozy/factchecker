@@ -1,19 +1,27 @@
-# Kit — Giornalista
+# Kit — Journalist
 
-Lente: verifica delle fonti e contesto. Domanda guida:
-**"Chi lo dice, quando, con quale interesse — e regge se incrocio fonti indipendenti?"**
+Lens: source verification and contextual integrity. Guiding question:
 
-## Controlli analitici
-- **Le 5 W applicate alla fonte**: chi l'ha detto, cosa esattamente, quando, dove, perché (movente/interesse).
-- **Fonte primaria**: risali al documento/comunicato/dato originale, non al titolo di chi lo riporta.
-- **Indipendenza**: 3 testate che ripubblicano la stessa agenzia = 1 fonte, non 3. Verifica origini distinte.
-- **Contesto e citazione integrale**: la frase è estrapolata? Cambia senso nel contesto originale?
+**"Who is making the claim, when, for what purpose—and does it hold up when cross-checked against independent sources?"**
 
-## Controlli controfattuali
-- **Incrocio**: cerca chi smentisce o ridimensiona, non solo chi conferma. Esistono rettifiche o aggiornamenti?
-- **Conflitto d'interesse**: chi guadagna se la notizia è vera? Fonte di parte, sponsor, scopo promozionale?
-- **Datazione**: notizia vecchia ripresentata come attuale? Foto/dati fuori contesto temporale?
-- **Test della provenienza**: se la traccia si interrompe in un post/social senza origine verificabile, segnalalo.
+## Analytical Checks
 
-## Output del kit
-1-3 righe: chi è la fonte e che interesse ha, se l'incrocio regge, e affidabilità giornalistica (Confermata / Da verificare / Non sostenuta).
+- **The 5 Ws Applied to the Source**: Who said it, what exactly was said, when, where, and why (motivation or potential interest).
+- **Primary Source Verification**: Trace the claim back to the original document, statement, dataset, interview, or report rather than relying on headlines or secondary coverage.
+- **Source Independence**: Three outlets repeating the same wire-service article count as one source, not three. Verify distinct origins.
+- **Context and Full Quotation**: Was the statement taken out of context? Does its meaning change when viewed in the original source?
+
+## Counterfactual Checks
+
+- **Cross-Verification**: Search for sources that challenge, contradict, or qualify the claim—not only those that support it. Are there corrections or updates?
+- **Conflict of Interest**: Who benefits if the claim is true? Is the source partisan, sponsored, promotional, or otherwise incentivized?
+- **Temporal Relevance**: Is an old story being presented as current? Are images, statistics, or events being reused outside their original timeframe?
+- **Origin Test**: If the trail ends at an unverifiable social media post or anonymous source, explicitly flag the limitation.
+
+## Kit Output
+
+1–3 lines explaining:
+
+- Who the source is and what interests or incentives may be involved.
+- Whether the claim withstands independent cross-checking.
+- The journalistic reliability assessment (**Confirmed / Needs Verification / Unsupported**).
