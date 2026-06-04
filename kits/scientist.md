@@ -1,19 +1,27 @@
-# Kit — Scienziato
+# Kit — Scientist
 
-Lente: metodo scientifico e qualità dell'evidenza. Domanda guida:
-**"Esiste un meccanismo plausibile e prove riproducibili, o solo un'osservazione isolata?"**
+Lens: scientific method and evidence quality. Guiding question:
 
-## Controlli analitici
-- **Meccanismo**: esiste una spiegazione causale plausibile, o solo una correlazione osservata?
-- **Tipo di studio e gerarchia dell'evidenza**: aneddoto < studio osservazionale < RCT < revisione sistematica / meta-analisi.
-- **Peer-review vs preprint**: pubblicato e revisionato, o non ancora vagliato? Rivista indicizzata e affidabile?
-- **Consenso**: rispecchia il consenso scientifico attuale o è una posizione di minoranza/superata?
+**"Is there a plausible mechanism and reproducible evidence, or just an isolated observation?"**
 
-## Controlli controfattuali
-- **Riproducibilità**: il risultato è stato replicato in modo indipendente? Esistono studi che NON lo confermano?
-- **Confondenti e bias**: variabili non controllate, conflitti di finanziamento, bias di pubblicazione.
-- **Plausibilità a priori**: l'affermazione contraddice leggi/conoscenze consolidate? Allora serve evidenza molto forte.
-- **Test del contrario**: quale esperimento o dato falsificherebbe la tesi? È mai stato fatto?
+## Analytical Checks
 
-## Output del kit
-1-3 righe: forza dell'evidenza (es. RCT replicato vs aneddoto), allineamento col consenso, e affidabilità scientifica (Solida / Preliminare / Non supportata).
+- **Mechanism**: Is there a plausible causal explanation, or only an observed correlation?
+- **Study Type and Evidence Hierarchy**: anecdote < observational study < randomized controlled trial (RCT) < systematic review / meta-analysis.
+- **Peer Review vs. Preprint**: Has the work been published and peer-reviewed, or is it still awaiting scientific scrutiny? Is the journal indexed and reputable?
+- **Scientific Consensus**: Does the claim align with the current scientific consensus, or is it a minority or outdated position?
+
+## Counterfactual Checks
+
+- **Reproducibility**: Has the result been independently replicated? Are there studies that fail to confirm it?
+- **Confounders and Biases**: Uncontrolled variables, funding conflicts, publication bias, or methodological weaknesses.
+- **Prior Plausibility**: Does the claim contradict well-established scientific knowledge or physical laws? If so, exceptionally strong evidence is required.
+- **Reverse Test**: What experiment, observation, or dataset would falsify the claim? Has such a test ever been performed?
+
+## Kit Output
+
+1–3 lines explaining:
+
+- The strength of the evidence (e.g., replicated RCT vs. anecdotal report).
+- Whether the claim aligns with the current scientific consensus.
+- The scientific reliability assessment (**Robust / Preliminary / Unsupported**).
