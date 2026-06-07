@@ -1,7 +1,3 @@
----
-name: factchecker
-description: Fact-checker — prende un'informazione/affermazione, cerca fonti autorevoli, prova a smentirle con tecniche da avvocato/analista/scienziato/giornalista, ne pesa la qualità e mostra di default solo il bollino (VALIDA / PARZIALMENTE VALIDA / NON VALIDA / NON VERIFICABILE) con il livello di confidenza. Fonti e analisi esperti solo a richiesta (flag --fonti). Trigger: "fact check", "verifica questa informazione", "è vero che", "trova le fonti", "/factchecker".
----
 
 # FactChecker
 
